@@ -68,7 +68,7 @@ const App: React.FC = () => {
     ];
 
     // Set sample data only if local storage is empty
-    if (localStorage.getItem("requestTypes")?.length === 0) {
+    if (!localStorage.getItem("requestTypes")) {
       localStorage.setItem("requestTypes", JSON.stringify(sampleData));
     }
   }, []);
